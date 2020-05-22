@@ -4,9 +4,9 @@ namespace FreeArticles\Repostories;
 
 use Plenty\Exceptions\ValidationException;
 use Plenty\Modules\Plugin\DataBase\Contracts\DataBase;
-use ToDoList\Contracts\FreeArticleRepositoryContract;
-use ToDoList\Models\FreeArticle;
-use ToDoList\Validators\FreeArticleValidator;
+use FreeArticles\Contracts\FreeArticleRepositoryContract;
+use FreeArticles\Models\FreeArticle;
+use FreeArticles\Validators\FreeArticleValidator;
  
 class FreeArticleRepository implements FreeArticleRepositoryContract 
 {
