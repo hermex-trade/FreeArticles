@@ -4,7 +4,7 @@ namespace FreeArticles\Controllers;
 
 use Plenty\Plugin\Controller;
 use Plenty\Plugin\Http\Request;
-use Plenty\Plugin\Template\Twig;
+use Plenty\Plugin\Templates\Twig;
 use FreeArticles\Contracts\FreeArticleRepositoryContract;
 
 class FreeArticleContentController extends Controller 
