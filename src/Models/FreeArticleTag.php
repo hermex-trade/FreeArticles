@@ -5,11 +5,10 @@ namespace FreeArticles\Models;
 use Plenty\Modules\Plugin\Database\Contracts\Model;
 
 /**
- * Class FreeArticle
+ * Class FreeArticleTag
  *
- * @property int    $id
- * @property string $type
- * @property string $condition
+ * @property int $id
+ * @property int $freeArticleTagId
  */
 class FreeArticleTag extends Model
 {
