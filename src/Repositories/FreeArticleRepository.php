@@ -31,7 +31,7 @@ class FreeArticleRepository implements FreeArticleRepositoryContract
     public function getFreeArticleList(): array 
     {
         $database = pluginApp(Database::class);
-        $freeArticleList = $database->query(FreeArticle::class)->select("*");
+        $freeArticleList = $database->query(FreeArticle::class)->get();
 
         return $freeArticleList;
     }
@@ -58,8 +58,21 @@ class FreeArticleRepository implements FreeArticleRepositoryContract
 
         return $freeArticle;
     }
-}
 
+    public function deleteFreeArticle($id): FreeArticle
+    {
+        $database = pluginApp(DataBase::class);
+
+        $freeArticleList = $database->query(FreeArticle::class)
+            ->where('id', '=', $id)
+            ->get();
+
+        $freeArticle = $freeArticleList[0];
+        $database->delete($freeArticle);
+
+        return $freeArticle;
+    }
+}
 
 
 ?>

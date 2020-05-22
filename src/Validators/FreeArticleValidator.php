@@ -12,4 +12,9 @@ class FreeArticleValidator extends Validator
         $this->addString('type', true);
         $this->addString('condition', true);
     }
+
+    public function buildCustomMessages()
+    {
+        // TODO: Implement buildCustomMessages() method.
+    }
 }
