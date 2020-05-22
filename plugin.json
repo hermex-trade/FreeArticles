@@ -1,0 +1,8 @@
+{
+    "name":  "FreeArticlesBackendView",
+    "description": "Backend view to manage the free articles",
+    "namespace": "FreeArticles",
+    "author": "Nicolas Andrea Almy",
+    "type": "backend",
+    "serviceProvoider": "FreeArticles\\Providers\\FreeArticlesViewServiceProvider"
+}

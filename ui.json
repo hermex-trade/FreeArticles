@@ -1,0 +1,14 @@
+{
+    "defaultEntryPoint" : "index.html",
+    "namespace"         : "FreeArticles",
+    "icon": "icon-plugin",
+    "menuEntries"       : [
+                            {
+                              "label": "FreeArticles",
+                              "menu": "start",
+                              "urlKey": "freearticles",
+                              "entryPoint": "index.html",
+                              "icon": "icon-add"
+                            }
+                          ]
+}
