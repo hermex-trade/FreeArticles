@@ -1,0 +1,15 @@
+{
+    "formatVersion": 1.0,
+    "menu": {
+        "Config.FreeArticleTag": {
+            "label": "Config.FreeArticleTagHeading",
+            "formFields": {
+                "resultfields.free_article_tag": {
+                    "type": "inputNumber",
+                    "required": true,
+                    "label": "Config.freeArticleTagId"
+                }
+            }
+        }
+    }
+}
