@@ -4,7 +4,7 @@
     "menuEntries"       : [
                             {
                               "label": "Gratisartikel",
-                              "menu": "start",
+                              "menu": "item",
                               "urlKey": "free-articles",
                               "entryPoint": "index.html"
                             }
