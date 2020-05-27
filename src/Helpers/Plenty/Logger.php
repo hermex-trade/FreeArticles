@@ -12,9 +12,9 @@ class Logger
     {
     }
 
-    public static function error($identifikator, $message, $value)
+    public static function info($identifikator, $message, $value)
     {
-        return pluginApp(Logger::class)->getLogger($identifikator)->error($message, $value);
+        return pluginApp(Logger::class)->getLogger($identifikator)->info($message, $value);
     }
 }
 
