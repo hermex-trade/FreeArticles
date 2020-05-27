@@ -4,5 +4,6 @@
     "namespace": "FreeArticles",
     "author": "Nicolas Andrea Almy",
     "type": "backend",
-    "serviceProvider": "FreeArticles\\Providers\\FreeArticleViewServiceProvider"
+    "serviceProvider": "FreeArticles\\Providers\\FreeArticleViewServiceProvider",
+    "runOnBuild": "FreeArticles\\Migrations\\CreateFreeArticleTable"
 }
