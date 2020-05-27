@@ -32,7 +32,7 @@ class FreeArticleRepository implements FreeArticleRepositoryContract
     {
         $database = pluginApp(Database::class);
         $freeArticleList = $database->query(FreeArticle::class)->get();
-
+        
         return $freeArticleList;
     }
 
