@@ -1,6 +1,6 @@
 {
     "name":  "FreeArticles",
-    "description": "FreeArticles.description",
+    "description": "Plugin für das Verwalten und Anzeigen von Gratisartikel",
     "namespace": "FreeArticles",
     "author": "Nicolas Andrea Almy",
     "type": "backend",
