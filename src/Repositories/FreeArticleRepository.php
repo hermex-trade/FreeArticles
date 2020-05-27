@@ -1,6 +1,6 @@
 <?php 
 
-namespace FreeArticles\Repostories;
+namespace FreeArticles\Repositories;
 
 use Plenty\Exceptions\ValidationException;
 use Plenty\Modules\Plugin\DataBase\Contracts\DataBase;
