@@ -4,5 +4,5 @@
     "namespace": "FreeArticles",
     "author": "Nicolas Andrea Almy",
     "type": "backend",
-    "serviceProvoider": "FreeArticles\\Providers\\FreeArticlesViewServiceProvider"
+    "serviceProvider": "FreeArticles\\Providers\\FreeArticlesViewServiceProvider"
 }
