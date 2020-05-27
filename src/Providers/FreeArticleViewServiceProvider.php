@@ -6,7 +6,7 @@ use Plenty\Plugin\ServiceProvider;
 use FreeArticles\Contracts\FreeArticleRepositoryContract;
 use FreeArticles\Repostories\FreeArticleRepository;
 
-class FreeArticlesViewServiceProvider extends ServiceProvider 
+class FreeArticleViewServiceProvider extends ServiceProvider 
 {
     public function register() 
     {
