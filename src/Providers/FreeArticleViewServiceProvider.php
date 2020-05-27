@@ -4,7 +4,7 @@ namespace FreeArticles\Providers;
 
 use Plenty\Plugin\ServiceProvider;
 use FreeArticles\Contracts\FreeArticleRepositoryContract;
-use FreeArticles\Repostories\FreeArticleRepository;
+use FreeArticles\Repositories\FreeArticleRepository;
 
 class FreeArticleViewServiceProvider extends ServiceProvider 
 {
