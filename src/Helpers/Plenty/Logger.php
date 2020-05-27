@@ -3,7 +3,6 @@
 namespace FreeArticles\Helpers\Plenty;
 
 use Plenty\Plugin\Log\Loggable;
-use Plenty\Plugin\ConfigRepository;
 
 class Logger 
 {
@@ -13,9 +12,9 @@ class Logger
     {
     }
 
-    public static function error($identificator, $message, $value)
+    public static function error($identifikator, $message, $value)
     {
-        return pluginApp(Logger::class)->getLogger($identificator)->error($message, $value);
+        return pluginApp(Logger::class)->getLogger($identifikator)->error($message, $value);
     }
 }
 

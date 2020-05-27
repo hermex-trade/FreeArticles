@@ -32,6 +32,8 @@ class FreeArticleSearchController extends Controller
     
         $variation = $repo->search();
         $result = $variation->getResult();
+
+        return $result;
     }
 }
 

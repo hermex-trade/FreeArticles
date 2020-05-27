@@ -14,12 +14,12 @@ use Plenty\Modules\Plugin\Database\Contracts\Model;
 class FreeArticle extends Model 
 {
     public $id          = 0;
-    public $type        = '';
-    public $condition   = '';
+    public $type        = "";
+    public $condition   = "";
 
     public function getTableName(): string 
     {
-        return "FreeArticles::FreeArticle";
+        return 'FreeArticles::FreeArticle';
     }
 }
 
