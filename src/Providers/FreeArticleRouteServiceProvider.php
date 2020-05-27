@@ -15,7 +15,7 @@ class FreeArticleRouteServiceProvider extends RouteServiceProvider
         $router->put('freearticle/{id}', 'FreeArticles\Controllers\FreeArticleContentController@updateFreeArticle')->where('id', '\d+');
         $router->delete('freearticle/{id}', 'FreeArticles\Controllers\FreeArticleContentController@deleteFreeArticle')->where('id', '\d+');
         
-        $router->get('search', 'FreeArticles\Controllers\FreeArticleSearchController@searchFreeArticleTag');
+        $router->get('cre', 'FreeArticles\Controllers\FreeArticleSearchController@searchFreeArticleTag');
     }
 }
 

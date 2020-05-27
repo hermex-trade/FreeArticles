@@ -1,6 +1,6 @@
 {
     "name":  "FreeArticles",
-    "description": "Backend view to manage the free articles",
+    "description": "FreeArticles.description",
     "namespace": "FreeArticles",
     "author": "Nicolas Andrea Almy",
     "type": "backend",
