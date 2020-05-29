@@ -15,6 +15,10 @@ class FreeArticleSearchController extends Controller
     {
         $repo = pluginApp(VariationSearchRepositoryContract::class);
 
+        $repo->setFilters([
+            'variationTagId' => 126
+        ]);
+
         $repo->setSearchParams([
             'variationTagId' => 126,
             'with'  => [
