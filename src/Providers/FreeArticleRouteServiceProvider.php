@@ -15,7 +15,7 @@ class FreeArticleRouteServiceProvider extends RouteServiceProvider
         $router->put('freearticle/{id}', 'FreeArticles\Controllers\FreeArticleContentController@updateFreeArticle')->where('id', '\d+');
         $router->delete('freearticle/{id}', 'FreeArticles\Controllers\FreeArticleContentController@deleteFreeArticle')->where('id', '\d+');
         
-        $router->get('freearticle/tag', 'FreeArticles\Controllers\FreeArticleSearchController@searchFreeArticleTag');
+        $router->get('freearticle/tag', 'FreeArticles\Controllers\FreeArticleSearchController@searchFreeArticleTag')->addMiddleware(['oauth.cookie', 'oauth',]);
     }
 }
 
