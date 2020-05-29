@@ -9,7 +9,7 @@ use FreeArticles\Contracts\FreeArticleRepositoryContract;
 
 class FreeArticleContentController extends Controller 
 {
-    public function showFreeArticle(Twig $twig, FreeArticleRepositoryContract $freeArticleRepo): string 
+    public function show(Twig $twig, FreeArticleRepositoryContract $freeArticleRepo): string 
     {
         $freeArticleList = $freeArticleRepo->getFreeArticleList();
         //$templateData = array("freearticles" => $freeArticleList);
@@ -17,21 +17,21 @@ class FreeArticleContentController extends Controller
         return json_encode($freeArticleList);
     }
 
-    public function createFreeArticle(Request $request, FreeArticleRepositoryContract $freeArticleRepo): string 
+    public function create(Request $request, FreeArticleRepositoryContract $freeArticleRepo): string 
     {
         $createdFreeArticle = $freeArticleRepo->createFreeArticle($request->all());
         return json_encode($createdFreeArticle);
     }
 
-    public function updateFreeArticle(int $id, array $data, FreeArticleRepositoryContract $freeArticleRepo): string 
+    public function update(int $id, array $data, FreeArticleRepositoryContract $freeArticleRepo): string 
     {
-        $updatedFreeArticle = $freeArticleRepo->updateFreeArticle($id, $data);
+        $updatedFreeArticle = $freeArticleRepo->update($id, $data);
         return json_encode($updatedFreeArticle);
     }
 
-    public function deleteFreeArticle(int $id, FreeArticleRepositoryContract $freeArticleRepo): string 
+    public function delete(int $id, FreeArticleRepositoryContract $freeArticleRepo): string 
     {
-        $deletedFreeArticle = $freeArticleRepo->deleteFreeArticle($id);
+        $deletedFreeArticle = $freeArticleRepo->delete($id);
         return json_encode($deletedFreeArticle);
     }
 }

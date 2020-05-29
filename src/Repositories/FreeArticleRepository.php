@@ -11,7 +11,7 @@ use FreeArticles\Validators\FreeArticleValidator;
 class FreeArticleRepository implements FreeArticleRepositoryContract 
 {
 
-    public function createFreeArticle(array $data): FreeArticle 
+    public static function create(array $data): FreeArticle 
     {
         try {
             FreeArticleValidator::validateOrFail($data);
@@ -28,7 +28,7 @@ class FreeArticleRepository implements FreeArticleRepositoryContract
         return $freeArticle;    
     }
 
-    public function getFreeArticleList(): array 
+    public static function all(): array 
     {
         $database = pluginApp(Database::class);
         $freeArticleList = $database->query(FreeArticle::class)->get();
@@ -36,7 +36,7 @@ class FreeArticleRepository implements FreeArticleRepositoryContract
         return $freeArticleList;
     }
 
-    public function updateFreeArticle($id, array $data): FreeArticle 
+    public static function update($id, array $data): FreeArticle 
     {
         $database = pluginApp(DataBase::class);
         $freeArticleList = $database->query(FreeArticle::class)
@@ -59,7 +59,7 @@ class FreeArticleRepository implements FreeArticleRepositoryContract
         return $freeArticle;
     }
 
-    public function deleteFreeArticle($id): FreeArticle
+    public static function delete($id): FreeArticle
     {
         $database = pluginApp(DataBase::class);
 
@@ -71,6 +71,17 @@ class FreeArticleRepository implements FreeArticleRepositoryContract
         $database->delete($freeArticle);
 
         return $freeArticle;
+    }
+
+    public static function findOrCreate(array $fields) 
+    {
+        $freeArticle = FreeArticleRepository::findById($fields["id"]);
+
+        if ($freeArticle) {
+            return $freeArticle;
+        }
+
+        return FreeArticleRepository::create($fields);
     }
 }
 

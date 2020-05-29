@@ -10,12 +10,13 @@ class FreeArticleRouteServiceProvider extends RouteServiceProvider
 {
     public function map(Router $router) 
     {
-        $router->get('freearticle', 'FreeArticles\Controllers\FreeArticleContentController@showFreeArticle');
-        $router->post('freearticle', 'FreeArticles\Controllers\FreeArticleContentController@createFreeArticle');
-        $router->put('freearticle/{id}', 'FreeArticles\Controllers\FreeArticleContentController@updateFreeArticle')->where('id', '\d+');
-        $router->delete('freearticle/{id}', 'FreeArticles\Controllers\FreeArticleContentController@deleteFreeArticle')->where('id', '\d+');
+        // TODO Secure all routes but /freearticle
+        $router->get('freearticle', 'FreeArticles\Controllers\FreeArticleContentController@show');
+        $router->post('freearticle', 'FreeArticles\Controllers\FreeArticleContentController@create');
+        $router->put('freearticle/{id}', 'FreeArticles\Controllers\FreeArticleContentController@update')->where('id', '\d+');
+        $router->delete('freearticle/{id}', 'FreeArticles\Controllers\FreeArticleContentController@delete')->where('id', '\d+');
         
-        $router->get('freearticle/tag', 'FreeArticles\Controllers\FreeArticleSearchController@searchFreeArticleTag')->addMiddleware(['oauth.cookie', 'oauth',]);
+        $router->get('freearticle/tag', 'FreeArticles\Controllers\FreeArticleSearchController@search')->addMiddleware(['oauth.cookie', 'oauth',]);
     }
 }
 

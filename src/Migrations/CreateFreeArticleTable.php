@@ -14,4 +14,6 @@ class CreateFreeArticleTable
         $result = $migrate->createTable(FreeArticle::class);
         Logger::info('CreateFreeArticleTable_finished', 'Migration finished', $result);
     }
+
+   
 }

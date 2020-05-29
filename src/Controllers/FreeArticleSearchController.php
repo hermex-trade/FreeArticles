@@ -11,7 +11,7 @@ class FreeArticleSearchController extends Controller
 {
     /**
      */
-    public function searchFreeArticleTag() 
+    public function find() 
     {
         $repo = pluginApp(VariationSearchRepositoryContract::class);
 

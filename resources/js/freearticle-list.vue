@@ -13,13 +13,8 @@ import freearticle from './freearticle'
 
 export default {
 
-computed: {
-    meetConditions() {
-        
-    }
 }
 
-}
 </script>
 
 <style>
