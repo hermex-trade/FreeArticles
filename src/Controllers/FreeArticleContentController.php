@@ -12,9 +12,9 @@ class FreeArticleContentController extends Controller
     public function showFreeArticle(Twig $twig, FreeArticleRepositoryContract $freeArticleRepo): string 
     {
         $freeArticleList = $freeArticleRepo->getFreeArticleList();
-        $templateData = array("freearticles" => $freeArticleList);
+        //$templateData = array("freearticles" => $freeArticleList);
         //return $twig->render('FreeArticles::content.freearticle', $templateData);
-        return json_encode($templateData);
+        return json_encode($freeArticleList);
     }
 
     public function createFreeArticle(Request $request, FreeArticleRepositoryContract $freeArticleRepo): string 
